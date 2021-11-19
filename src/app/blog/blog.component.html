@@ -1,0 +1,32 @@
+<div class="nav-bar">
+    <ul class="nav justify-content-center">
+        <li class="nav-item" [routerLink]="'/home'">
+            <a class="nav-link">Home</a>
+        </li>
+        <li class="nav-item" [routerLink]="'/blog'">
+            <a class="nav-link">Blog</a>
+        </li>
+        <li class="nav-item" [routerLink]="'/new'">
+            <a class="nav-link">Add new animal</a>
+        </li>
+    </ul>
+</div>
+
+<select (change)="onCategoryChange($event)">
+    <option [value]="arrCategory" *ngFor="let cat of arrCategory">
+        {{cat}}
+    </option>
+</select>
+
+<div class="container">
+    <div class="blog" *ngFor="let dogs of arrDogs, let indice = index">
+        <h2>{{dogs.title}}</h2>
+        <img [src]="dogs.image" alt="">
+        <p>{{dogs.description}}</p>
+        <p>Autor/a: {{dogs.Author}}</p>
+        <h6>{{dogs.category}}</h6>
+        <h6>{{dogs.date| date:'dd/MM/yyyy'}}</h6>
+        <button (click)="deleteDogs(indice)" class="btn btn-danger
+        ">Borrar</button>
+    </div>
+</div>

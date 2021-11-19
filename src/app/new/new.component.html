@@ -1,0 +1,65 @@
+<div class="nav-bar">
+    <ul class="nav justify-content-center">
+        <li class="nav-item" [routerLink]="'/home'">
+            <a class="nav-link">Home</a>
+        </li>
+        <li class="nav-item" [routerLink]="'/blog'">
+            <a class="nav-link">Blog</a>
+        </li>
+        <li class="nav-item" [routerLink]="'/new'">
+            <a class="nav-link">Add new animal</a>
+        </li>
+    </ul>
+</div>
+<div class="bkgContainer ">
+    <div class="container mt-3">
+
+        <form [formGroup]="formulario" (ngSubmit)="onSubmit()" novalidate>
+            <div class="mb-3">
+                <label class="form-label">Título</label>
+                <input type="text" class="form-control" formControlName="title">
+                <p class="error" *ngIf="checkError('title', 'required',true)">
+                    El campo es requerido, por favor no me hagas enfadar</p>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Descripción</label>
+                <div class="form-floating">
+                    <textarea class="form-control" id="floatingTextarea" formControlName="description"></textarea>
+                    <label for="floatingTextarea" class="text-dark"></label>
+                </div>
+                <p class="error" *ngIf="checkError('texto', 'required',true)">
+                    El campo es requerido, por favor concentrate llevas 2 fallos
+                </p>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Autor</label>
+                <input type="text" class="form-control" formControlName="Author">
+                <p class="error" *ngIf="checkError('Author', 'required',true)">
+                    El campo es requerido, no me fio de las personas anónimas
+                </p>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Imagen</label>
+                <input type="text" class="form-control" formControlName="image">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Fecha</label>
+                <input type="date" class="form-control" formControlName="date">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Categoria</label>
+                <select class="form-control" formControlName="category">
+                    <option value="">Selecciona una categoria</option>
+                    <option value="Europeo">Europeo</option>
+                    <option value="Americano">Americano</option>
+                    <option value="Asiatico">Asiático</option>
+                </select>
+            </div>
+            <div class="text-center">
+                <input type="submit" value="Enviar" [disabled]="!formulario.valid" class="btn btn-danger ">
+            </div>
+
+        </form>
+    </div>
+</div>

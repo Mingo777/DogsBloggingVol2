@@ -1,0 +1,219 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css');
+
+* {
+    box-sizing: border-box;
+}
+ img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero {
+    background-image: url('https://elcorreoweb.es/binrepository/761x401/52c0/675d400/none/10703/SGOE/eca-cachorros-de-perro_20692860_20210902111624.jpg');
+    background-color: #999;
+    background-blend-mode: multiply;
+    height: 80vh;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+}
+
+.hero .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 95%;
+}
+
+.hero h1 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: calc(var(-1em)*2.3);
+    color: white;
+}
+
+.hero h2 {
+    color: green;
+    font-size: 2.25em;
+    margin: 1em 0;
+    text-shadow: 1px 1px 3px black;
+}
+
+.hero p {
+    color: white;
+    font-size: 1.15em;
+
+}
+
+.boton {
+    display: inline-block;
+    background-color: transparent;
+    color: goldenrod;
+    text-decoration: none;
+    padding: 10px;
+    margin: 20px ;
+    border: 1px solid green;
+    
+}
+
+.boton:hover {
+    color:green;
+    background-color: transparent;
+    border: 1px solid green;
+    padding: 10px;
+}
+
+.boton:hover i {
+    transition: 0.5s;
+    transform: translateX(5px);
+}
+
+.hero .social {
+    display: flex;
+    width: 160px;
+    justify-content: space-between;
+}
+
+.hero .social a {
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+.hero .social a:hover{
+    color: goldenrod;
+    transition: 1s;
+}
+
+section {
+    padding: 2.5em 1em;
+}
+
+section h2 {
+    color: black;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2em;
+    text-align: center;
+}
+
+section h2 span {
+    color: green;
+}
+
+section .underline {
+    position:static;
+    width: 100px;
+    margin: 0 auto;
+    font-weight: bold;
+    color: green;
+    text-align: center;
+}
+
+section .underline hr {
+    position: relative;
+    width: 100%;
+    border-color: green;
+    top: -1px;
+}
+
+section .flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+section .flex article {
+    width: 100%;
+    padding: 20px;
+    border-right: 1px solid #aaa;
+    border-left:1px solid #aaa ;
+    
+}
+
+section .flex article h3 {
+    font-weight: 700;
+    margin: 10px auto;
+}
+
+section p {
+    color: #777;
+    line-height: 1.10em;
+    margin-bottom: 0.5em;
+}
+
+.enlace {
+    text-decoration: none;
+    color: green;
+    font-weight: 700;
+}
+ section .flex article div i {
+    border: 1px solid green;
+    color: green;
+    font-size: 150%;
+    padding: 0.5em;
+}
+
+ section h3 {
+    font-weight: 700;
+    font-size: 110%;
+    margin-left: 20px;
+}
+
+ section h4 {
+    color: green;
+    margin: 1em ;
+}
+
+#aboutus figure {
+    width: 90%;
+    margin: 2em auto;
+    margin: 10px;
+}
+
+#aboutus figure .marco {
+    border: 3px solid green;
+    transform: rotateZ(10deg);
+    transition: 1s;
+}
+
+#aboutus figure .marco img {
+    transform: rotateZ(-5deg);
+    transition: 1s;
+    width: 30vh;
+    padding: 20px;
+    margin: 10px;
+}
+
+#aboutus figure:hover .marco, main #aboutus figure:hover .marco img {
+    transform: rotateZ(0deg);
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(172, 173, 156);
+    color:green;
+    padding: 1em 0.625em;
+    text-align: center;
+}
+
+footer a {
+    color:green;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: gold;
+}
+
+.arriba {
+    position: fixed;
+    bottom: 50px;
+    right: 10px;
+    font-size: 2em;
+}
+
+.arriba a {
+    color: green;
+}
